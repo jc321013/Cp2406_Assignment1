@@ -2,13 +2,19 @@
  * Created by jc321013 on 15/09/16.
  */
 public class A1 {
+    private static final int NEW_GAME = 1;
+
     public static void main(String[] args) {
 
 
         showWelcome();
         showMenu();
         int opt = getUserMenuChoice();
-    }
+        if(opt == NEW_GAME) {
+
+        }
+        }
+
 
     private static int getUserMenuChoice() {
         //todo: see prac how to get integer value
