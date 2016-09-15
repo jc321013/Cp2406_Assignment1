@@ -1,3 +1,5 @@
+package Cp2406A1.java;
+
 import Cp2406A1.java.STGame;
 
 /**
@@ -22,7 +24,8 @@ public class A1 {
 
         int numPlayers = getNumPlayers();
         STGame game = new STGame(numPlayers);
-//        selectDealer();
+        game.selectDealer();
+        game.dealRandomCardsToEachPlayer();
 //        dealCards();
     }
 
