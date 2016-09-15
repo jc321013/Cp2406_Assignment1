@@ -1,5 +1,7 @@
 package Cp2406A1.java;
 
+import java.util.ArrayList;
+
 /**
  * Created by jc321013 on 15/09/16.
  */
@@ -24,7 +26,7 @@ public class STGame {
 
         players = new STPlayer[numPlayers];
         for (STPlayer player : players) {
-            STCard card = deck.dealCards(NUM_CARDS_TO_DEAL);
+            ArrayList<STCard> card = deck.dealCards(NUM_CARDS_TO_DEAL);
             player.setCards();
         }
     }
