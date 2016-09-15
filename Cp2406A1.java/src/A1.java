@@ -1,3 +1,5 @@
+import Cp2406A1.java.STGame;
+
 /**
  * Created by jc321013 on 15/09/16.
  */
@@ -11,9 +13,23 @@ public class A1 {
         showMenu();
         int opt = getUserMenuChoice();
         if(opt == NEW_GAME) {
+            startNewGame();
 
         }
         }
+
+    private static void startNewGame() {
+
+        int numPlayers = getNumPlayers();
+        STGame game = new STGame(numPlayers);
+//        selectDealer();
+//        dealCards();
+    }
+
+    private static int getNumPlayers() {
+        //todo: see prac how to get the number
+        return 2;
+    }
 
 
     private static int getUserMenuChoice() {
