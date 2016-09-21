@@ -14,24 +14,39 @@ public class A1 {
         showWelcome();
         showMenu();
         int opt = getUserMenuChoice();
+        STGame game;
         if(opt == NEW_GAME) {
-            startNewGame();
+            game = startNewGame();
+            game.playGame();
 
         }
         }
 
-    private static void startNewGame() {
+    private static STGame startNewGame() {
 
         int numPlayers = getNumPlayers();
         STGame game = new STGame(numPlayers);
         game.selectDealer();
         game.dealRandomCardsToEachPlayer();
+
+        game.selectYouAsPlayer();
+
+        STPlayer humanPlayer = game.getHumanPlayer();
+        showPlayer(humanPlayer);
+
+//        game.playGame();
+
 //        dealCards();
+        return game;
+    }
+
+    private static void showPlayer(STPlayer humanPlayer) {
+        System.out.println("human player=" + humanPlayer);
     }
 
     private static int getNumPlayers() {
         //todo: see prac how to get the number
-        return 2;
+        return 3;
     }
 
 
