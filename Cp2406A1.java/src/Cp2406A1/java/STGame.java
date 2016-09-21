@@ -22,6 +22,7 @@ public class STGame {
     public void selectDealer() {
         //todo; google how to get random int in java
 
+
         dealerId = 1;
     }
 
@@ -55,7 +56,7 @@ public class STGame {
 
 //            todo; setup players in correct order
             for (int i = 0; i < players.length; i++) {
-                
+
 //                todo; check humanPlayer
 
 
