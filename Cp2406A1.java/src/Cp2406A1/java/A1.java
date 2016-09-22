@@ -8,6 +8,7 @@ import java.util.Scanner;
  */
 public class A1 {
     private static final int NEW_GAME = 1;
+    private static final int NUM_PLAYERS = 1;
 
 
     public static void main(String[] args) {
@@ -16,11 +17,19 @@ public class A1 {
         showWelcome();
         showMenu();
         int opt = getUserMenuChoice();
+        int choice = getNumPlayers();
         STGame game;
         if(opt == NEW_GAME) {
             game = startNewGame();
             game.playGame();
+        if (choice > 3 && choice < 5) {
+//            game = startNewGame();
+//            game.selectDealer();
 
+
+
+
+            }
 
         }
         }
