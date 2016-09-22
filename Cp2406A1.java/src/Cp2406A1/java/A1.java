@@ -22,12 +22,10 @@ public class A1 {
         if(opt == NEW_GAME) {
             game = startNewGame();
             game.playGame();
-        if (choice > 3 && choice < 5) {
-//            game = startNewGame();
+            //            game = startNewGame();
 //            game.selectDealer();
-
-
-
+            if (choice > 3 && choice < 5) {
+                
 
             }
 
