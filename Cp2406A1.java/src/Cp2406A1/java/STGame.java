@@ -23,6 +23,7 @@ public class STGame {
         //todo; google how to get random int in java
 
 
+
         dealerId = 1;
     }
 
