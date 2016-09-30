@@ -1,6 +1,5 @@
 package Cp2406A1.java;
 
-import Cp2406A1.java.STGame;
 import java.util.Scanner;
 
 /**
@@ -8,7 +7,8 @@ import java.util.Scanner;
  */
 public class A1 {
     private static final int NEW_GAME = 1;
-    private static final int NUM_PLAYERS = 1;
+    private static final int END_GAME = 2;
+//    private static final int NUM_PLAYERS = 1;
 
 
     public static void main(String[] args) {
@@ -17,20 +17,30 @@ public class A1 {
         showWelcome();
         showMenu();
         int opt = getUserMenuChoice();
-        int choice = getNumPlayers();
         STGame game;
         if(opt == NEW_GAME) {
             game = startNewGame();
             game.playGame();
             //            game = startNewGame();
 //            game.selectDealer();
-
-                
-
-
-
         }
+        if (opt == END_GAME) {
+            game = endGame();
+            game.exitGame();
+
+
+            }
         }
+
+
+    private static STGame endGame() {
+
+            System.out.println("Thanks for playing");
+        return null;
+
+
+
+    }
 
     private static STGame startNewGame() {
 
@@ -56,14 +66,14 @@ public class A1 {
 
     private static int getNumPlayers() {
         //todo: see prac how to get the number
-        int selection;
+        int choice;
         Scanner input = new Scanner(System.in);
         System.out.print("How many people will be playing: ");
-        selection = input.nextInt();
-        System.out.println("You chose: " + selection);
-        if (selection < 3 || selection > 5)
+        choice = input.nextInt();
+        System.out.println("You chose: " + choice);
+        if (choice < 3 || choice > 5)
             System.out.println("You need to have 3-5 Players");
-        return selection;
+        return choice;
     }
 
 
