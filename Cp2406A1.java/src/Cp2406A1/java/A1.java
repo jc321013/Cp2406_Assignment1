@@ -24,10 +24,10 @@ public class A1 {
             game.playGame();
             //            game = startNewGame();
 //            game.selectDealer();
-            if (choice > 3 && choice < 5) {
+
                 
 
-            }
+
 
         }
         }
@@ -60,8 +60,9 @@ public class A1 {
         Scanner input = new Scanner(System.in);
         System.out.print("How many people will be playing: ");
         selection = input.nextInt();
-        int getNumPlayers = input.nextInt();
-        System.out.println("You chose: " + getNumPlayers);
+        System.out.println("You chose: " + selection);
+        if (selection < 3 || selection > 5)
+            System.out.println("You need to have 3-5 Players");
         return selection;
     }
 
