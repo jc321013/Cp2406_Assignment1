@@ -25,22 +25,20 @@ public class A1 {
 //            game.selectDealer();
         }
         if (opt == END_GAME) {
-            game = endGame();
-            game.exitGame();
+            endGame();
+//            game.exitGame();
 
 
             }
         }
 
 
-    private static STGame endGame() {
-
+    private static void endGame() {
             System.out.println("Thanks for playing");
-        return null;
-
-
-
     }
+
+
+
 
     private static STGame startNewGame() {
 
