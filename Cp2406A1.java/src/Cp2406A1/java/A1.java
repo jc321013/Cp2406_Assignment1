@@ -63,7 +63,7 @@ public class A1 {
     }
 
     private static int getNumPlayers() {
-        //todo: see prac how to get the number
+//        todo: see prac how to get the number(Done)
         int choice;
         Scanner input = new Scanner(System.in);
         System.out.print("How many people will be playing: ");
@@ -76,7 +76,7 @@ public class A1 {
 
 
     private static int getUserMenuChoice() {
-        //todo: see prac how to get integer value
+        //todo: see prac how to get integer value(Done)
         int selection;
         Scanner input = new Scanner(System.in);
         System.out.print("Choose option: ");
