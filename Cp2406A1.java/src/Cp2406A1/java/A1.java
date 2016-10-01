@@ -18,7 +18,7 @@ public class A1 {
         showMenu();
         int opt = getUserMenuChoice();
         STGame game;
-        if(opt == NEW_GAME) {
+        if (opt == NEW_GAME) {
             game = startNewGame();
             game.playGame();
             //            game = startNewGame();
@@ -26,18 +26,17 @@ public class A1 {
         }
         if (opt == END_GAME) {
             endGame();
-//            game.exitGame();
+//            game.exitGame();        }
 
 
-            }
         }
-
-
-    private static void endGame() {
-            System.out.println("Thanks for playing");
     }
 
 
+
+    private static void endGame() {
+        System.out.println("Thanks for playing");
+    }
 
 
     private static STGame startNewGame() {
@@ -69,10 +68,16 @@ public class A1 {
         System.out.print("How many people will be playing: ");
         choice = input.nextInt();
         System.out.println("You chose: " + choice);
-        if (choice < 3 || choice > 5)
+        if (choice > 3 && choice < 5)
+            return choice;
+        else {
             System.out.println("You need to have 3-5 Players");
+        }
         return choice;
+
     }
+
+
 
 
     private static int getUserMenuChoice() {
