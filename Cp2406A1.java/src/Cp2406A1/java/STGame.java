@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class STGame {
     private static final int NUM_CARDS_TO_DEAL = 8;
+    private static final int CHOOSE_DEALER = 1;
     private int numPlayers;
     private int numDealers;
     private int dealerId;
@@ -24,16 +25,14 @@ public class STGame {
     public void selectDealer() {
         //todo; google how to get random int in java
         dealers = new STDealer[numDealers];
-        for (int i = 0; i < numDealers; i++) {
+        for (int STPlayer = 0; i < numDealers; i++) {
             dealers [i] = new STDealer("DealerId=" + i);
         }
 
-        for (STDealer dealer : dealers) {
-            ArrayList<STCard> cards = deck.dealCards(NUM_CARDS_TO_DEAL);
+        for (STPlayer dealer : dealers) {
+            ArrayList<STCard> cards = deck.dealCards(CHOOSE_DEALER);
             dealer.setCards(cards);
         }
-
-
 
         dealerId = 1;
     }

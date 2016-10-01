@@ -67,13 +67,15 @@ public class A1 {
         Scanner input = new Scanner(System.in);
         System.out.print("How many people will be playing: ");
         choice = input.nextInt();
-        System.out.println("You chose: " + choice);
+        System.out.println("There are" + choice + "people playing");
         if (choice > 3 && choice < 5)
             return choice;
         else {
-            System.out.println("You need to have 3-5 Players");
+            if( choice < 3 || choice > 5)
+                System.out.println("You need to have 3-5 Players");
+            return choice;
         }
-        return choice;
+
 
     }
 
