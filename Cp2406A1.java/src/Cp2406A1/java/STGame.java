@@ -24,13 +24,13 @@ public class STGame {
     }
 
 //    Randomly select dealer from 3-5 players
-    public static int selectDealer(int numPlayers) {
+    public static void selectDealer(int numPlayers) {
         int dealerID;
         Random randdealerID = new Random();
         int n = randdealerID.nextInt((numPlayers) + 1);
         dealerID = n;
         System.out.println( "The Dealer is Player " + dealerID);
-        return dealerID;
+//        return dealerID;
 
 
 

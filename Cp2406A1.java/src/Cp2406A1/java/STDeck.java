@@ -23,8 +23,8 @@ public class STDeck {
 
 
         }
-//        deckBuilder = new STDeckBuilder();
-//        cards = deckBuilder.buildDeck();
+        deckBuilder = new STDeckBuilder();
+
     }
     public ArrayList<STCard> dealCards(int numCards) {
         ArrayList<STCard> ret = new ArrayList<>();
