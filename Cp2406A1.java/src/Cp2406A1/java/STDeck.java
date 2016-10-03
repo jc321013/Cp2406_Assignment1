@@ -19,7 +19,7 @@ public class STDeck {
         cards = new ArrayList<STCard>();
 
         for (int i = 0; i < NUM_CARDS_INIT; i++) {
-              cards.add(new STCard(i));
+              cards.add(new STCard(i, "Quartz", new String[]{""}, "SiO_2", "tectosilicate", "hexagonal", new String[]{"igneous", "metamorphic", "sedimentary"}, "7.0", "2.65", "poor/none", "high", "moderate"));
 
 
         }

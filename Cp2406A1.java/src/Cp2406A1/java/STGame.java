@@ -58,7 +58,6 @@ public class STGame {
 
 
     public void selectYouAsPlayer() {
-
         yourPlayerID = 0;
 
 
