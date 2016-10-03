@@ -1,18 +1,17 @@
 package Cp2406A1.java;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by jc321013 on 15/09/16.
  */
 public class STGame {
     private static final int NUM_CARDS_TO_DEAL = 8;
-    private static final int CHOOSE_DEALER = 1;
     private int numPlayers;
     private int numDealers;
-    private int dealerId;
+    private int dealerID;
     private STPlayer[] players;
-    private STDealer[] dealers;
     private STDeck deck;
     int yourPlayerId;
 
@@ -22,19 +21,18 @@ public class STGame {
 
     }
 
-    public void selectDealer() {
+    public static int selectDealer(int numPlayers) {
         //todo; google how to get random int in java
-        dealers = new STDealer[numDealers];
-        for (int STPlayer = 0; i < numDealers; i++) {
-            dealers [i] = new STDealer("DealerId=" + i);
-        }
+        int dealerID;
+        //int numPlayers;
+        Random randdealerID = new Random();
+        int n = randdealerID.nextInt((numPlayers) + 1);
+        dealerID = n;
+        System.out.println( "Dealer is player " + dealerID);
+        return dealerID;
 
-        for (STPlayer dealer : dealers) {
-            ArrayList<STCard> cards = deck.dealCards(CHOOSE_DEALER);
-            dealer.setCards(cards);
-        }
 
-        dealerId = 1;
+
     }
 
     public void dealRandomCardsToEachPlayer() {
@@ -80,6 +78,8 @@ public class STGame {
 
 
         }
+
+
 
 //    public void exitGame() {
 //        boolean gameIsOn = false;

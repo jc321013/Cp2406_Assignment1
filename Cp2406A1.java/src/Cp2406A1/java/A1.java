@@ -34,16 +34,12 @@ public class A1 {
 
 
 
-    private static void endGame() {
-        System.out.println("Thanks for playing");
-    }
-
-
     private static STGame startNewGame() {
 
         int numPlayers = getNumPlayers();
+        int dealerID  = STGame.selectDealer(numPlayers);
         STGame game = new STGame(numPlayers);
-        game.selectDealer();
+//        game.selectDealer(numPlayers);
         game.dealRandomCardsToEachPlayer();
 
         game.selectYouAsPlayer();
@@ -57,27 +53,30 @@ public class A1 {
         return game;
     }
 
+    private static void endGame() {
+        System.out.println("Thanks for playing, i hope you had fun");
+    }
+
     private static void showPlayer(STPlayer humanPlayer) {
         System.out.println("human player=" + humanPlayer);
     }
 
-    private static int getNumPlayers() {
-//        todo: see prac how to get the number(Done)
+    private static int getNumPlayers() {//
         int choice;
         Scanner input = new Scanner(System.in);
-        System.out.print("How many people will be playing: ");
+        System.out.print("How many players will be playing?: ");
         choice = input.nextInt();
-        System.out.println("There are" + choice + "people playing");
-        if (choice > 3 && choice < 5)
-            return choice;
-        else {
-            if( choice < 3 || choice > 5)
-                System.out.println("You need to have 3-5 Players");
-            return choice;
+        while (choice < 3 || choice > 5){
+            System.out.println("To play the game you need to have 3 - 5 players.");
+        System.out.print("How many players will be playing?: ");
+        choice = input.nextInt();
+        }
+        System.out.println("There are " + choice + " players playing ");
+        return choice;
         }
 
 
-    }
+
 
 
 
@@ -95,6 +94,13 @@ public class A1 {
     private static void showMenu() {
         System.out.println("1. Start Game");
         System.out.println("2. Exit");
+        switch (getUserMenuChoice()) {
+            case 1: startNewGame();
+                break;
+            case 2: endGame();
+                break;
+        }
+
     }
 
     private static void showWelcome() {
