@@ -14,6 +14,8 @@ public class STGame {
     private STDeck deck;
     private int yourPlayerID;
 
+
+
     public STGame(int numPlayers) {
         this.numPlayers = numPlayers;
         deck = new STDeck();
@@ -84,13 +86,6 @@ public class STGame {
 
 
 
-//    public void exitGame() {
-//        boolean gameIsOn = false;
-//        if(!gameIsOn) {
-//            System.out.println("Game Finished");
-//        }
-////
-//        }
     }
 
 

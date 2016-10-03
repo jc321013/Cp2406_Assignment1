@@ -1,5 +1,6 @@
 package Cp2406A1.java;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -16,13 +17,13 @@ public class A1 {
 
         showWelcome();
         showMenu();
+
         int opt = getUserMenuChoice();
         STGame game;
         if (opt == NEW_GAME) {
             game = startNewGame();
             game.playGame();
-            //            game = startNewGame();
-//            game.selectDealer();
+            
         }
         if (opt == END_GAME) {
             endGame();
@@ -47,9 +48,7 @@ public class A1 {
         STPlayer humanPlayer = game.getHumanPlayer();
         showPlayer(humanPlayer);
 
-//        game.playGame();
 
-//        dealCards();
         return game;
     }
 
@@ -107,4 +106,7 @@ public class A1 {
     private static void showWelcome() {
         System.out.println("Welcome to Mineral SuperTrumps");
     }
+
+
+
 }
