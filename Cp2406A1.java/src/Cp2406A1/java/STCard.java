@@ -6,12 +6,12 @@ package Cp2406A1.java;
 public class STCard {
     private int id;
     private String Name;
-    private String[] Type;
+    private String[] categories;
 
     public STCard(int id) {
         this.id = id;
         this.Name = Name;
-        this.Type = Type;
+        this.categories = categories;
     }
 
 

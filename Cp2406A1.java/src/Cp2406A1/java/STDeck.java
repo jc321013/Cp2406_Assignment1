@@ -3,13 +3,14 @@ package Cp2406A1.java;
 import java.util.ArrayList;
 import java.util.Random;
 
+
 /**
  * Created by jc321013 on 15/09/16.
  */
 public class STDeck {
     private static final int NUM_CARDS_INIT = 60;
     private ArrayList<STCard> cards;
-//    private DeckBuilder deckBuilder;
+//    private STDeckBuilder deckBuilder;
 
     //todo: list of all cards
 
@@ -22,7 +23,7 @@ public class STDeck {
             //google how to create random array of integers
 
         }
-//        deckBuilder = new DeckBuilder();
+//        deckBuilder = new STDeckBuilder();
 //        cards = deckBuilder.buildDeck();
     }
     public ArrayList<STCard> dealCards(int numCards) {
@@ -35,6 +36,9 @@ public class STDeck {
         }
         return ret;
     }
+
+
+
 
 
 
