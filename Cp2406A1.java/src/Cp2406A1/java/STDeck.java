@@ -10,17 +10,17 @@ import java.util.Random;
 public class STDeck {
     private static final int NUM_CARDS_INIT = 60;
     private ArrayList<STCard> cards;
-//    private STDeckBuilder deckBuilder;
+    private STDeckBuilder deckBuilder;
 
     //todo: list of all cards
 
+//    shuffles cards
     public STDeck() {
         cards = new ArrayList<STCard>();
 
         for (int i = 0; i < NUM_CARDS_INIT; i++) {
               cards.add(new STCard(i));
-            //todo: get all lists and random at suffle
-            //google how to create random array of integers
+
 
         }
 //        deckBuilder = new STDeckBuilder();

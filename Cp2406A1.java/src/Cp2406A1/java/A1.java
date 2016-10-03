@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class A1 {
     private static final int NEW_GAME = 1;
     private static final int END_GAME = 2;
-//    private static final int NUM_PLAYERS = 1;
+
 
 
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class A1 {
         if (opt == NEW_GAME) {
             game = startNewGame();
             game.playGame();
-            
+
         }
         if (opt == END_GAME) {
             endGame();
@@ -36,9 +36,9 @@ public class A1 {
 
 
     private static STGame startNewGame() {
-
+//Starts game, controls most functions
         int numPlayers = getNumPlayers();
-//        int dealerID  = STGame.selectDealer(numPlayers);
+        int dealerID  = STGame.selectDealer(numPlayers);
         STGame game = new STGame(numPlayers);
         STGame.selectDealer(numPlayers);
         game.dealRandomCardsToEachPlayer();
@@ -58,7 +58,7 @@ public class A1 {
         System.out.println("human player is " + humanPlayer);
     }
 
-
+//Offers user input and error checking for number of players
     private static int getNumPlayers() {//
         int choice;
         Scanner input = new Scanner(System.in);
@@ -90,7 +90,7 @@ public class A1 {
         return selection;
 
     }
-
+// Menu choice, to start and end game
     private static void showMenu() {
         System.out.println("1. Start Game");
         System.out.println("2. Exit");
