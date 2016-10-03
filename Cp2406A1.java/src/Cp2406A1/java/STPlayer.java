@@ -8,10 +8,10 @@ import java.util.ArrayList;
 
 public class STPlayer {
     private ArrayList<STCard> cards;
-    private String playerId;
+    private String playerID;
 
     public STPlayer(String playerId) {
-        this.playerId = playerId;
+        this.playerID = playerId;
     }
 
 
@@ -20,6 +20,7 @@ public class STPlayer {
     }
 
     public String toString(){
-        return "PlayerId=" + playerId + "\n cards=" + cards;
+
+        return " PlayerId= " + playerID + "\n" + playerID + " cards are: " + cards;
     }
 }

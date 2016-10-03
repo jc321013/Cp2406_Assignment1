@@ -5,12 +5,16 @@ package Cp2406A1.java;
  */
 public class STCard {
     private int id;
+//    private String title;
+//    private String[] categories;
 
-    public STCard(int id){
+    public STCard(int id) {
         this.id = id;
+//        this.title = title;
+//        this.categories = categories;
     }
 
     public String toString(){
-        return "id=" + id;
+        return "ID= " + id;
     }
 }

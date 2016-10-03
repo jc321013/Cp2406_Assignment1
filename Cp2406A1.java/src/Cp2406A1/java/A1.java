@@ -26,20 +26,20 @@ public class A1 {
         }
         if (opt == END_GAME) {
             endGame();
-//            game.exitGame();        }
+       }
 
 
         }
-    }
+
 
 
 
     private static STGame startNewGame() {
 
         int numPlayers = getNumPlayers();
-        int dealerID  = STGame.selectDealer(numPlayers);
+//        int dealerID  = STGame.selectDealer(numPlayers);
         STGame game = new STGame(numPlayers);
-//        game.selectDealer(numPlayers);
+        STGame.selectDealer(numPlayers);
         game.dealRandomCardsToEachPlayer();
 
         game.selectYouAsPlayer();
@@ -53,13 +53,12 @@ public class A1 {
         return game;
     }
 
-    private static void endGame() {
-        System.out.println("Thanks for playing, i hope you had fun");
-    }
+
 
     private static void showPlayer(STPlayer humanPlayer) {
-        System.out.println("human player=" + humanPlayer);
+        System.out.println("human player is " + humanPlayer);
     }
+
 
     private static int getNumPlayers() {//
         int choice;
@@ -77,7 +76,9 @@ public class A1 {
 
 
 
-
+    private static void endGame() {
+        System.out.println("Thanks for playing, i hope you enjoyed the game :)");
+    }
 
 
 
@@ -104,6 +105,6 @@ public class A1 {
     }
 
     private static void showWelcome() {
-        System.out.println("Welcome");
+        System.out.println("Welcome to Mineral SuperTrumps");
     }
 }
